@@ -20,6 +20,8 @@ defmodule TestprojectWeb.Router do
     get "/", PageController, :home
   end
 
+
+
   # Other scopes may use custom stacks.
   # scope "/api", TestprojectWeb do
   #   pipe_through :api
@@ -33,6 +35,11 @@ defmodule TestprojectWeb.Router do
     # you can use Plug.BasicAuth to set up some basic authentication
     # as long as you are also using SSL (which you should anyway).
     import Phoenix.LiveDashboard.Router
+
+    scope "/admin", TestprojectWeb do
+      pipe_through :browser
+      live "/dashboard", AdminDashboardLive
+    end
 
     scope "/dev" do
       pipe_through :browser
