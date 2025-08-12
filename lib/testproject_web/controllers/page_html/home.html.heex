@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laman Utama</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-50 font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-blue-200 shadow">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center gap-4">
+        <img src="images/3.png" alt="Logo" class="h-12">
+        <img src="images/7.png" alt="Logokedua" class="h-8 -ml-8 mt-4">
+        <img src="images/8.png" alt="Logoketiga" class="h-8 -ml-6 mt-6">
+        <img src="images/5.png" alt="Logokeempat" class="h-10 -ml-7 mt-5">
+        <img src="images/6.png" alt="Logokelima" class="h-10 -ml-10 mt-7">
+        <img src="images/4.png" alt="Logokeenam" class="h-10 -ml-6 mt-7">
+      </div>
+
+      <div class = "flex gap-3"> <!-- susun dua kolum secara mendatar, dengan jarak gap-8 antara mereka. -->
+        <div class="flex flex-col items-center ">
+          <img src="images/pengguna.png" alt="Logopengguna" class="h-8">
+            <a href="#" class="hover:underline text-sm">Pengguna</a>
+        </div>
+
+        <div class="flex flex-col items-center ">
+          <img src="images/admin.png" alt="Logoadmin" class="h-8">
+          <a href="#" class="hover:underline text-sm">Admin</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Header kecil di bawah -->
+  <div style="background-color:#09033F;" class= "border-t border-blue-300">
+   <div class="max-w-7xl mx-auto px-6 py-2 text-sm text-white flex gap-4 ml-40">
+          <a href="#" class="hover:underline">Laman Utama</a>
+          <a href="#" class="hover:underline">Mengenai Kami</a>
+          <a href="#" class="hover:underline">Program</a>
+          <a href="#" class="hover:underline">Hubungi</a>
+    </div>
+  </div>
+
+  <!-- Page 1: Gambar -->
+  <section id="page1" class="flex items-center justify-center max-w-7xl mx-auto py-40">
+    <img src="images/3.png" alt="Gambar Utama" class="h-64">
+
+  <!-- Panah kanan -->
+    <span onclick="showPage2()" class="mx-2 px-10 text-2xl cursor-pointer hover:text-gray-500">
+       >
+    </span>
+  </section>
+
+  <!-- Page 2: VISI & MISI (mula-mula hidden) -->
+  <section id="page2" class="max-w-7xl mx-auto py-10 px-6 grid md:grid-cols-2 gap-8 hidden">
+    <div class="bg-white shadow-lg p-6 rounded-xl">
+      <h2 class="text-xl font-bold mb-4">VISI</h2>
+      <p>Menjadi sebuah organisasi terunggul dan bestari dalam menawarkan perkhidmatan di Negeri Sabah yang dikendalikan sepenuhnya oleh anak muda.</p>
+    </div>
+    <div class="bg-white shadow-lg p-6 rounded-xl">
+      <h2 class="text-xl font-bold mb-4">MISI</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Menjadi penyedia khidmat yang terbaik dan disenangi oleh pelanggan</li>
+        <li>Menawarkan khidmat yang mudah dan sistem birokrasi yang ceria pengguna</li>
+        <li>Melestarikan masyarakat akar umbi dengan sikap “murah hati dan pemberi”</li>
+        <li>Mencontohi dan mengamalkan nilai-nilai murni dalam sebarang urusan</li>
+        <li>Menitikberatkan kebajikan pekerja dan pelanggan dengan baik</li>
+      </ul>
+    </div>
+
+    <!-- Panah kiri untuk kembali -->
+    <div class="col-span-2 flex justify-center mt-6">
+      <span onclick="showPage1()" class="mx-2 text-4xl cursor-pointer hover:text-blue-500">
+        ⬅
+      </span>
+    </div>
+  </section>
+
+  <script>
+    function showPage2() {
+      document.getElementById('page1').classList.add('hidden');
+      document.getElementById('page2').classList.remove('hidden');
+    }
+
+    function showPage1() {
+      document.getElementById('page2').classList.add('hidden');
+      document.getElementById('page1').classList.remove('hidden');
+    }
+  </script>
+
+  <!-- KURSUS DITAWARKAN -->
+  <section class="bg-blue-300 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-2xl font-bold text-white mb-8">KURSUS DITAWARKAN</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-blue-100 p-6 rounded-xl shadow">
+          <h3 class="font-bold text-lg mb-4">Kursus Jangka Panjang</h3>
+          <ul class="list-disc pl-6">
+            <li>Kursus Teknologi Maklumat - Program Software Development Bootcamp</li>
+            <li>Kursus Kecantikan Spa & Posnatal</li>
+          </ul>
+        </div>
+        <div class="bg-blue-100 p-6 rounded-xl shadow">
+          <h3 class="font-bold text-lg mb-4">Kursus Jangka Pendek</h3>
+          <ul class="list-disc pl-6">
+            <li>Kursus Masakan Pelbagai Jenis Kek Kukus</li>
+            <li>Kursus Asas Pemasangan & Penyelenggaraan Paip</li>
+            <li>Kursus Asas Membai­kpulih & Penyelenggaraan Penghawa Dingin</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATISTIK -->
+  <section class="py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-2xl font-bold text-black mb-8">STATISTIK</h2>
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+
+      <!-- Kotak 1 -->
+      <div class="flex flex-col items-center">
+        <img src="images/ikonpelatih.png" alt="pelatih" class="h-32">
+        <div class="text-4xl font-bold">250</div>
+        <div>Bilangan Pelatih</div>
+      </div>
+
+      <!-- Kotak 2 -->
+      <div class="flex flex-col items-center">
+        <img src="images/ikonkursus.png" alt="kursus" class="h-32">
+        <div class="text-4xl font-bold">25</div>
+        <div>Bilangan Program</div>
+      </div>
+
+      <!-- Kotak 3 -->
+      <div class="flex flex-col items-center">
+        <img src="images/ikonjurusan.png" alt="jurusan" class="h-32">
+        <div class="text-4xl font-bold">10</div>
+        <div>Jurusan Ditawarkan</div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERI -->
+  <section class="bg-blue-100 py-10">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-center text-2xl font-bold mb-8">GALERI</h2>
+      <div class="grid md:grid-cols-4 gap-6">
+        <img src="images/galeri1.png" alt="Galeri 1" class="rounded-lg shadow">
+        <img src="images/galeri2.png" alt="Galeri 2" class="rounded-lg shadow">
+        <img src="images/galeri3.png" alt="Galeri 3" class="rounded-lg shadow">
+        <img src="images/galeri4.png" alt="Galeri 4" class="rounded-lg shadow">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 px-6">
+      <div>
+        <h3 class="font-bold">SHARIF PERCHAYA SDN. BHD.</h3>
+        <p>Lido, Kepayan</p>
+        <p>No.Tel: 011-3371 7129</p>
+        <p>Email: sharifperchaya@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="font-bold">MASA OPERASI :</h3>
+        <p>Hari Bekerja: Isnin - Jumaat</p>
+        <p>Masa Bekerja: 8:00 A.M. – 5:00 P.M.</p>
+        <p>Waktu Rehat: 12:30 P.M. – 14:00 P.M.</p>
+        <p>Cuti: Sabtu, Ahad, dan Cuti Umum</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
