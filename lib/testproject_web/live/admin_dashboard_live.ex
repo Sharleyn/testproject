@@ -17,7 +17,7 @@ defmodule TestprojectWeb.AdminDashboardLive do
           <div class="flex items-center space-x-3">
             <div class="text-3xl">🎓</div>
             <div>
-              <div class="font-bold text-lg">Kursus Hub</div>
+              <div class="font-bold text-lg">SPKP</div>
               <div class="text-sm text-blue-200">Admin Dashboard</div>
             </div>
           </div>
@@ -43,12 +43,10 @@ defmodule TestprojectWeb.AdminDashboardLive do
         <header class="bg-white shadow-sm border-b border-gray-200">
           <div class="flex justify-between items-center px-6 py-4">
             <div class="flex items-center space-x-4">
-              <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
-                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill_rule="evenodd" clip_rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-                </svg>
+              <div class="flex items-center gap-4">
+                  <img src={~p"/images/3.png"} alt="Logo" class="h-12">
               </div>
-              <h1 class="text-xl font-semibold text-gray-800">Kursus Hub Admin Dashboard</h1>
+              <h1 class="text-xl font-semibold text-gray-800">SPKP Admin Dashboard</h1>
             </div>
             <div class="flex items-center space-x-4">
               <span class="text-gray-600">admin@gmail.com</span>
@@ -69,39 +67,80 @@ defmodule TestprojectWeb.AdminDashboardLive do
 
           <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white border rounded-lg p-6 hover:shadow-md cursor-pointer">
+            <div class="flex items-center justify-between">
+            <div>
               <h4 class="font-semibold text-gray-800 mb-2">Tambah kursus baru</h4>
               <p class="text-gray-600 text-sm">Cipta kursus baru untuk peserta</p>
+              </div>
+                <img src={~p"/images/users.png"} alt="Peserta" class="w-8 h-8 " />
+              </div>
             </div>
+
+
             <div class="bg-white border rounded-lg p-6 hover:shadow-md cursor-pointer">
+            <div class="flex items-center justify-between">
+            <div>
               <h4 class="font-semibold text-gray-800 mb-2">Pengesahan permohonan</h4>
               <p class="text-gray-600 text-sm">Semak dan sahkan permohonan baru</p>
+              </div>
+                <img src={~p"/images/sah.png"} alt="Pengesahanpermohonan" class="w-8 h-8 " />
+              </div>
             </div>
+
             <div class="bg-white border rounded-lg p-6 hover:shadow-md cursor-pointer">
+            <div class="flex items-center justify-between">
+            <div>
               <h4 class="font-semibold text-gray-800 mb-2">Senarai peserta</h4>
               <p class="text-gray-600 text-sm">Senarai peserta yang mengikuti kursus</p>
             </div>
+                <img src={~p"/images/usershijauu.png"} alt="SenaraiPeserta" class="w-8 h-8 " />
           </div>
+        </div>
+        </div>
         </div>
 
         <!-- Statistik -->
         <div class="grid md:grid-cols-4 gap-6 px-6 mb-8">
-          <div class="bg-white rounded-lg p-6 shadow-sm border text-center">
+          <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="flex items-center justify-between w-full px-8">
+            <img src={~p"/images/users.png"} alt="Peserta" class="w-10 h-10 " />
+            <div class="flex flex-col items-center">
             <h4 class="text-sm text-gray-600">Jumlah peserta</h4>
             <div class="text-3xl font-bold text-gray-900">2300</div>
+            </div>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <h4 class="text-sm text-gray-600">Kursus tersedia</h4>
+          </div>
+
+         <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="flex items-center justify-between w-full px-8">
+            <img src={~p"/images/buku.png"} alt="Kursustersedia" class="w-10 h-10 " />
+            <div class="flex flex-col items-center">
+            <h4 class="text-sm text-gray-600">Kursus Tersedia</h4>
             <div class="text-3xl font-bold text-gray-900">20</div>
+            </div>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <h4 class="text-sm text-gray-600">Pendaftaran baharu</h4>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="flex items-center justify-between w-full px-8">
+            <img src={~p"/images/tickuser.png"} alt="Pendaftaranbaharu" class="w-10 h-10 " />
+            <div class="flex flex-col items-center">
+            <h4 class="text-sm text-gray-600">Pendaftaran Baharu</h4>
             <div class="text-3xl font-bold text-gray-900">132</div>
+            </div>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-sm border text-center">
-            <h4 class="text-sm text-gray-600">Kadar tamat</h4>
+          </div>
+
+          <div class="bg-white rounded-lg p-6 shadow-sm border">
+          <div class="flex items-center justify-between w-full px-8">
+            <img src={~p"/images/sijil.png"} alt="KadarTamat" class="w-10 h-10 " />
+            <div class="flex flex-col items-center">
+            <h4 class="text-sm text-gray-600">Kadar Tamat</h4>
             <div class="text-3xl font-bold text-gray-900">98%</div>
+            </div>
           </div>
-        </div>
+          </div>
+          </div>
 
         <!-- Table -->
         <div class="bg-white rounded-lg shadow-sm border mx-6 mb-8">
