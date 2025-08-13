@@ -6,7 +6,7 @@ defmodule TestprojectWeb.AdminDashboardLive do
     {:ok, socket}
   end
 
-
+@impl true
   def render(assigns) do
     ~H"""
     <div class="w-full min-h-screen bg-gray-100 flex">
