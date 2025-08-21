@@ -1,12 +1,12 @@
-defmodule Testproject.Accounts do
+defmodule Testproject.Accounts do 
   @moduledoc """
   The Accounts context.
   """
 
-  import Ecto.Query, warn: false
-  alias Testproject.Repo
+  import Ecto.Query, warn: false 
+  alias Testproject.Repo 
 
-  alias Testproject.Accounts.{User, UserToken, UserNotifier}
+  alias Testproject.Accounts.{User, UserToken, UserNotifier} 
 
   ## Database getters
 
@@ -38,11 +38,11 @@ defmodule Testproject.Accounts do
       nil
 
   """
-  def get_user_by_email_and_password(email, password)
-      when is_binary(email) and is_binary(password) do
-    user = Repo.get_by(User, email: email)
-    if User.valid_password?(user, password), do: user
-  end
+  def get_user_by_email_and_password(email, password) 
+      when is_binary(email) and is_binary(password) do 
+    user = Repo.get_by(User, email: email) 
+    if User.valid_password?(user, password), do: user 
+  end 
 
   @doc """
   Gets a single user.
@@ -58,7 +58,7 @@ defmodule Testproject.Accounts do
       ** (Ecto.NoResultsError)
 
   """
-  def get_user!(id), do: Repo.get!(User, id)
+  def get_user!(id), do: Repo.get!(User, id) 
 
   ## User registration
 

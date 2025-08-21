@@ -10,8 +10,9 @@ defmodule TestprojectWeb.AdminDashboardLive do
   def render(assigns) do
     ~H"""
     <div class="w-full min-h-screen bg-gray-100 flex">
-      <!-- Sidebar Component -->
-      <.live_component module={TestprojectWeb.SidebarComponent} id="sidebar" />
+       <!-- Sidebar -->
+      <.live_component module={TestprojectWeb.SidebarComponent} id="sidebar" current_view={@socket.view} />
+
 
       <!-- Main Content -->
       <div class="flex-1 flex flex-col">
@@ -47,6 +48,7 @@ defmodule TestprojectWeb.AdminDashboardLive do
 
           <div class="grid md:grid-cols-3 gap-6">
             <div class="bg-white border rounded-lg p-6 hover:shadow-md cursor-pointer">
+            <.link navigate={~p"/admin/kursus/new"} class="block">
               <div class="flex items-center justify-between">
                 <div>
                   <h4 class="font-semibold text-gray-800 mb-2">Tambah kursus baru</h4>
@@ -54,6 +56,7 @@ defmodule TestprojectWeb.AdminDashboardLive do
                 </div>
                 <img src={~p"/images/users.png"} alt="Peserta" class="w-8 h-8" />
               </div>
+              </.link>
             </div>
 
             <div class="bg-white border rounded-lg p-6 hover:shadow-md cursor-pointer">

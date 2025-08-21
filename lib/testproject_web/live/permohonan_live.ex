@@ -10,8 +10,8 @@ defmodule TestprojectWeb.PermohonanLive do
   def render(assigns) do
     ~H"""
     <div class="w-full min-h-screen bg-gray-100 flex">
-      <!-- Sidebar -->
-      <.live_component module={TestprojectWeb.SidebarComponent} id="sidebar" />
+       <!-- Sidebar -->
+    <.live_component module={TestprojectWeb.SidebarComponent} id="sidebar" current_view={@socket.view} />
 
       <!-- Main Content -->
       <div class="flex-1 flex flex-col">
